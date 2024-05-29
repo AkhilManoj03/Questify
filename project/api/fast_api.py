@@ -4,8 +4,8 @@ from fastapi import Query
 import mysql.connector as mysql
 from mysql.connector import Error
 import json
-from hashing import Hasher
-from scrapping import Scrapper
+from hasher.hashing import Hasher
+from scrapper.scrapping import Scrapper
 from jose import JWTError, jwt
 import asyncio
 
