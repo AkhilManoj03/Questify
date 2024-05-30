@@ -3,6 +3,7 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
 COPY ./api /app/api
 COPY ./hasher /app/hasher
 COPY ./scrapper /app/scrapper
+COPY .env /app/.env
 
 WORKDIR /app
 

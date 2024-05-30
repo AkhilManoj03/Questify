@@ -8,8 +8,12 @@ from hasher.hashing import Hasher
 from scrapper.scrapping import Scrapper
 from jose import JWTError, jwt
 import asyncio
+import os
+from dotenv import load_dotenv
 
-SECRET_KEY = "questify-secret-key"
+load_dotenv()
+
+SECRET_KEY = os.getenv('SECRET_KEY')
 ALGORITHM = "HS256"
 
 app = FastAPI()
@@ -29,10 +33,10 @@ app.add_middleware(
 
 
 db = mysql.connect(
-    host="cmsc508.com",
-    user="24SP_manoja2",
-    password="V00978659",
-    database="24SP_manoja2_pr"
+    host=os.getenv('HOST'),
+    user=os.getenv('USER'),
+    password=os.getenv('PASSWORD'),
+    database=os.getenv('DB')
 )
             
 mycursor = db.cursor()
