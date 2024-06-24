@@ -31,7 +31,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 db = mysql.connect(
     host=os.getenv('HOST'),
     user=os.getenv('USER'),

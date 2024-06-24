@@ -13,6 +13,6 @@ RUN pip3 install --no-cache-dir --upgrade -r /app/scrapper/scrapper_requirements
 
 ENV PYTHONPATH=/app
 
-EXPOSE 80
+EXPOSE 8932
 
-CMD ["uvicorn", "api.fast_api:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "api.fast_api:app", "--host", "0.0.0.0", "--port", "8932"]
